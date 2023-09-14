@@ -4,9 +4,9 @@ import themeConfigs from "./config/theme.config";
 import { ToastContainer } from "react-toastify";
 import CssBaseline from "@mui/material/CssBaseline";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MainLayout from "./components/layout/MainLayout";
+
 import routes from "./routes/routes";
-import PageWrapper from "./components/common/PageWrapper";
+import PageWrapper from "./component/common/PageWrapper";
 
 import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
@@ -35,7 +35,7 @@ const App = () => {
       {/* app routes */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainLayout />}>
+          <Route path="/" >
             {routes.map((route, index) => (
               route.index ? (
                 <Route
