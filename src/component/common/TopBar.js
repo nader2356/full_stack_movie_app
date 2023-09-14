@@ -29,7 +29,7 @@ const ScrollAppBar = ({ children, window }) => {
     }
   });
 };
-const Topbar = () => {
+const TopBar = () => {
   const { user } = useSelector((state) => state.user);
   const { appState } = useSelector((state) => state.appState);
   const { themeMode } = useSelector((state) => state.themeMode);
@@ -112,4 +112,4 @@ const Topbar = () => {
   );
 };
 
-export default Topbar;
+export default TopBar;
