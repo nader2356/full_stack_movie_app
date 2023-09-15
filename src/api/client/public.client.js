@@ -21,7 +21,9 @@ publicClient.interceptors.request.use(async config => {
 
 publicClient.interceptors.response.use((response) => {
   if (response && response.data) return response.data;
+  console.log(response);
   return response;
+
 }, (err) => {
   throw err.response.data;
 });

@@ -16,8 +16,7 @@ const userApi = {
         userEndpoints.signin,
         { username, password }
       );
-
-      return { response };
+      return { response };     
     } catch (err) { console.log("err"); return { err }; }
   },
   signup: async ({ username, password, confirmPassword, displayName }) => {
