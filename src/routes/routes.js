@@ -1,3 +1,4 @@
+import HomePage from "../pages/HomePage";
 
 
 export const routesGen = {
@@ -14,7 +15,7 @@ export const routesGen = {
 const routes = [
   {
     index: true,
- 
+    element: <HomePage />,
     state: "home"
   },
   {
