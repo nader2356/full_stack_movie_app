@@ -32,7 +32,7 @@ const favoriteApi = {
           mediaRate
         }
       );
-
+ 
       return { response };
     } catch (err) { return { err }; }
   },

@@ -34,6 +34,7 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
       });
 
       if (response) setMovies(response.results);
+      console.log(movies);
       if (err) toast.error(err.message);
       dispatch(setGlobalLoading(false));
     };

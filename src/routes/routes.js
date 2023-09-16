@@ -1,3 +1,5 @@
+import ProtectedPage from "../component/common/ProtectedPage";
+import FavoriteList from "../pages/FavoriteList";
 import HomePage from "../pages/HomePage";
 
 
@@ -35,7 +37,11 @@ const routes = [
   },
   {
     path: "/favorites",
-  
+    element: (
+      <ProtectedPage>
+        <FavoriteList />
+      </ProtectedPage>
+    ),
     state: "favorites"
   },
   {
