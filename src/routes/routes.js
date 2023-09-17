@@ -1,6 +1,7 @@
 import ProtectedPage from "../component/common/ProtectedPage";
 import FavoriteList from "../pages/FavoriteList";
 import HomePage from "../pages/HomePage";
+import ReviewList from "../pages/ReviewItem";
 
 
 export const routesGen = {
@@ -46,7 +47,11 @@ const routes = [
   },
   {
     path: "/reviews",
-   
+    element: (
+      <ProtectedPage>
+        <ReviewList />
+      </ProtectedPage>
+    ),
     state: "reviews"
   },
   {
