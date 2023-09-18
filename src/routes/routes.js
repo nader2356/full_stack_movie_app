@@ -1,6 +1,7 @@
 import ProtectedPage from "../component/common/ProtectedPage";
 import FavoriteList from "../pages/FavoriteList";
 import HomePage from "../pages/HomePage";
+import MediaSearch from "../pages/MediaSearch";
 import ReviewList from "../pages/ReviewItem";
 
 
@@ -28,7 +29,7 @@ const routes = [
   },
   {
     path: "/search",
-   
+    element: <MediaSearch />,
     state: "search"
   },
   {
