@@ -2,6 +2,7 @@ import ProtectedPage from "../component/common/ProtectedPage";
 import FavoriteList from "../pages/FavoriteList";
 import HomePage from "../pages/HomePage";
 import MediaSearch from "../pages/MediaSearch";
+import PersonDetail from "../pages/PersonDetail";
 import ReviewList from "../pages/ReviewItem";
 
 
@@ -24,7 +25,7 @@ const routes = [
   },
   {
     path: "/person/:personId",
-   
+    element: <PersonDetail />,
     state: "person.detail"
   },
   {
