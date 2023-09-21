@@ -1,6 +1,7 @@
 import ProtectedPage from "../component/common/ProtectedPage";
 import FavoriteList from "../pages/FavoriteList";
 import HomePage from "../pages/HomePage";
+import MediaDetail from "../pages/MediaDetail";
 import MediaList from "../pages/MediaList";
 import MediaSearch from "../pages/MediaSearch";
 import PersonDetail from "../pages/PersonDetail";
@@ -64,6 +65,7 @@ const routes = [
   },
   {
     path: "/:mediaType/:mediaId",
+    element: <MediaDetail />
     
   }
 ];
