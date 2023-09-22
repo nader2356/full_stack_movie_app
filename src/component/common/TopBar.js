@@ -29,12 +29,15 @@ const ScrollAppBar = ({ children, window }) => {
     }
   });
 };
-const TopBar = () => {
-
+const Topbar = () => {
+  const { user } = useSelector((state) => state.user);
   const { appState } = useSelector((state) => state.appState);
   const { themeMode } = useSelector((state) => state.themeMode);
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const dispatch = useDispatch();
+
   const onSwithTheme = () => {
     const theme = themeMode === themeModes.dark ? themeModes.light : themeModes.dark;
     dispatch(setThemeMode(theme));
@@ -93,9 +96,14 @@ const TopBar = () => {
 
             {/* user menu */}
             <Stack spacing={3} direction="row" alignItems="center">
-             
+              {!user && <Button
+                variant="contained"
+                onClick={() => dispatch(setAuthModalOpen(true))}
+              >
+                sign in
+              </Button>}
             </Stack>
-       
+            {user && <UserMenu />}
             {/* user menu */}
           </Toolbar>
         </AppBar>
@@ -104,4 +112,4 @@ const TopBar = () => {
   );
 };
 
-export default TopBar;
+export default Topbar;
