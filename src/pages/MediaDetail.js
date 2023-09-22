@@ -9,9 +9,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import CircularRate from "../components/common/CircularRate";
-import Container from "../components/common/Container";
-import ImageHeader from "../components/common/ImageHeader";
+import CircularRate from "../component/common/CircularRate";
+import Container from "../component/common/Container";
+import ImageHeader from "../component/common/ImageHeader";
 
 import uiConfigs from "../configs/ui.configs";
 import tmdbConfigs from "../api/configs/tmdb.configs";
