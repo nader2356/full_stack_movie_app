@@ -4,6 +4,7 @@ import HomePage from "../pages/HomePage";
 import MediaDetail from "../pages/MediaDetail";
 import MediaList from "../pages/MediaList";
 import MediaSearch from "../pages/MediaSearch";
+import PasswordUpdate from "../pages/PasswordUpdate";
 import PersonDetail from "../pages/PersonDetail";
 import ReviewList from "../pages/ReviewItem";
 
@@ -37,7 +38,11 @@ const routes = [
   },
   {
     path: "/password-update",
-  
+    element: (
+      <ProtectedPage>
+        <PasswordUpdate />
+      </ProtectedPage>
+    ),
     state: "password.update"
   },
   {
