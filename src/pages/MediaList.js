@@ -30,7 +30,7 @@ const MediaList = () => {
   useEffect(() => {
     dispatch(setAppState(mediaType));
     window.scrollTo(0, 0);
-  }, [mediaType, dispatch]);
+  }, [mediaType]);
 
   useEffect(() => {
     const getMedias = async () => {
@@ -45,7 +45,7 @@ const MediaList = () => {
 
       setMediaLoading(false);
       dispatch(setGlobalLoading(false));
-
+console.log(response)
       if (err) toast.error(err.message);
       if (response) {
         if (currPage !== 1) setMedias(m => [...m, ...response.results]);

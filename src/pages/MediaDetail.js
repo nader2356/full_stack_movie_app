@@ -50,18 +50,23 @@ const MediaDetail = () => {
       dispatch(setGlobalLoading(true));
       const { response, err } = await mediaApi.getDetail({ mediaType, mediaId });
       dispatch(setGlobalLoading(false));
+    
+     
+
+     
 
       if (response) {
         setMedia(response);
         setIsFavorite(response.isFavorite);
         setGenres(response.genres.splice(0, 2));
+      
       }
 
       if (err) toast.error(err.message);
     };
 
     getMedia();
-  }, [mediaType, mediaId, dispatch]);
+  }, [mediaType, mediaId, media, isFavorite, genres]);
 
   const onFavoriteClick = async () => {
     if (!user) return dispatch(setAuthModalOpen(true));

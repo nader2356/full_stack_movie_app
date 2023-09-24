@@ -1,13 +1,12 @@
-import ProtectedPage from "../component/common/ProtectedPage";
-import FavoriteList from "../pages/FavoriteList";
 import HomePage from "../pages/HomePage";
+import PersonDetail from "../pages/PersonDetail";
+import FavoriteList from "../pages/FavoriteList";
 import MediaDetail from "../pages/MediaDetail";
 import MediaList from "../pages/MediaList";
 import MediaSearch from "../pages/MediaSearch";
 import PasswordUpdate from "../pages/PasswordUpdate";
-import PersonDetail from "../pages/PersonDetail";
-import ReviewList from "../pages/ReviewItem";
-
+import ReviewList from "../pages/ReviewList";
+import ProtectedPage from "../component/common/ProtectedPage";
 
 export const routesGen = {
   home: "/",
@@ -66,12 +65,10 @@ const routes = [
   {
     path: "/:mediaType",
     element: <MediaList />
-    
   },
   {
     path: "/:mediaType/:mediaId",
     element: <MediaDetail />
-    
   }
 ];
 
