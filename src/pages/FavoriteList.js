@@ -32,7 +32,7 @@ const FavoriteItem = ({ media, onRemoved }) => {
 
   return (<>
     <MediaItem media={media} mediaType={media.mediaType} />
-    <LoadingButton
+    <Button
       fullWidth
       variant="contained"
       sx={{ marginTop: 2 }}
@@ -42,7 +42,7 @@ const FavoriteItem = ({ media, onRemoved }) => {
       onClick={onRemove}
     >
       remove
-    </LoadingButton>
+    </Button>
   </>);
 };
 

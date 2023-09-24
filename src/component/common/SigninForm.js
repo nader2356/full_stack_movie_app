@@ -31,7 +31,7 @@ const SigninForm = ({ switchAuthState }) => {
     onSubmit: async values => {
       setErrorMessage(undefined);
       setIsLoginRequest(true);
-      console.log("asdasdasdasd");
+    
       const { response, err } = await userApi.signin(values);
       setIsLoginRequest(false);
 
@@ -73,7 +73,7 @@ const SigninForm = ({ switchAuthState }) => {
         />
       </Stack>
 
-      <LoadingButton
+      <Button
         type="submit"
         fullWidth
         size="large"
@@ -82,7 +82,7 @@ const SigninForm = ({ switchAuthState }) => {
         loading={isLoginRequest}
       >
         sign in
-      </LoadingButton>
+      </Button>
 
       <Button
         fullWidth

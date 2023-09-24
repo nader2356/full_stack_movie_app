@@ -110,16 +110,17 @@ console.log(response)
         <MediaGrid
           medias={medias}
           mediaType={mediaType}
-        />
-        <LoadingButton
-          sx={{ marginTop: 8 }}
-          fullWidth
-          color="primary"
-          loading={mediaLoading}
-          onClick={onLoadMore}
-        >
-          load more
-        </LoadingButton>
+        />  
+        <Button
+        variant="text"
+        sx={{ marginTop: 8 }}
+        fullWidth
+        color="primary"
+        loading={mediaLoading}
+        onClick={onLoadMore}
+      >
+       load more
+                    </Button>
       </Box>
     </>
   );

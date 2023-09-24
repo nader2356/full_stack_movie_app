@@ -97,12 +97,12 @@ const MediaSearch = () => {
           <MediaGrid medias={medias} mediaType={mediaType} />
 
           {medias.length > 0 && (
-            <LoadingButton
+            <Button
               loading={onSearch}
               onClick={() => setPage(page + 1)}
             >
               load more
-            </LoadingButton>
+            </Button>
           )}
         </Stack>
       </Box>

@@ -50,23 +50,24 @@ const MediaDetail = () => {
       dispatch(setGlobalLoading(true));
       const { response, err } = await mediaApi.getDetail({ mediaType, mediaId });
       dispatch(setGlobalLoading(false));
-    
-     
-
-     
+	  
+	 
 
       if (response) {
         setMedia(response);
+		console.log(media);
+		
         setIsFavorite(response.isFavorite);
         setGenres(response.genres.splice(0, 2));
-      
+				console.log(isFavorite);
+				console.log(genres);
       }
 
       if (err) toast.error(err.message);
     };
 
     getMedia();
-  }, [mediaType, mediaId, media, isFavorite, genres]);
+  }, [mediaType, mediaId, dispatch]);
 
   const onFavoriteClick = async () => {
     if (!user) return dispatch(setAuthModalOpen(true));
@@ -193,7 +194,7 @@ const MediaDetail = () => {
 
                   {/* buttons */}
                   <Stack direction="row" spacing={1}>
-                    <LoadingButton
+                    <Button
                       variant="text"
                       sx={{
                         width: "max-content",
